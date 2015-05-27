@@ -1,6 +1,6 @@
 {
   "name": "validate.io-uint8array-clamped",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Validates if a value is a Uint8ClampedArray.",
   "author": {
     "name": "Athan Reines",
