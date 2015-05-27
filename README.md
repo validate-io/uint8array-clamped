@@ -43,7 +43,7 @@ console.log( isUint8ClampedArray( new Uint8ClampedArray( 10 ) ) );
 console.log( isUint8ClampedArray( new Int8Array( 10 ) ) );
 // returns false
 
-console.log( isUint8Array( new Uint8ClampedArray( 10 ) ) );
+console.log( isUint8ClampedArray( new Uint8Array( 10 ) ) );
 // returns false
 
 console.log( isUint8ClampedArray( new Int16Array( 10 ) ) );
