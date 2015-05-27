@@ -1,8 +1,8 @@
-uint8array-clamped
+Uint8ClampedArray
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Validates if a value is a Uint8ClampedArray.
+> Validates if a value is a [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray).
 
 
 ## Installation
@@ -17,18 +17,61 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-uint8array-clamped' );
+var isUint8ClampedArray = require( 'validate.io-uint8array-clamped' );
 ```
 
-#### foo( value )
+#### isUint8ClampedArray( value )
 
-What does this function do?
+Validates if a value is an [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray).
+
+``` javascript
+var arr = new Uint8ClampedArray( 10 );
+
+var bool = isUint8ClampedArray( arr );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-uint8array-clamped' );
+var isUint8ClampedArray = require( 'validate.io-uint8array-clamped' );
+
+console.log( isUint8ClampedArray( new Uint8ClampedArray( 10 ) ) );
+// returns true
+
+console.log( isUint8ClampedArray( new Int8Array( 10 ) ) );
+// returns false
+
+console.log( isUint8Array( new Uint8ClampedArray( 10 ) ) );
+// returns false
+
+console.log( isUint8ClampedArray( new Int16Array( 10 ) ) );
+// returns false
+
+console.log( isUint8ClampedArray( new Uint16Array( 10 ) ) );
+// returns false
+
+console.log( isUint8ClampedArray( new Int32Array( 10 ) ) );
+// returns false
+
+console.log( isUint8ClampedArray( new Uint32Array( 10 ) ) );
+// returns false
+
+console.log( isUint8ClampedArray( new Float32Array( 10 ) ) );
+// returns false
+
+console.log( isUint8ClampedArray( new Float64Array( 10 ) ) );
+// returns false
+
+console.log( isUint8ClampedArray( new Array( 10 ) ) );
+// returns false
+
+console.log( isUint8ClampedArray( {} ) );
+// returns false
+
+console.log( isUint8ClampedArray( null ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
